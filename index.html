@@ -66,11 +66,15 @@
         <p class="interaction-hint">Sélectionnez un projet pour découvrir ses visuels et les étapes de conception.</p>
         <div class="portfolio-wall" role="group" aria-label="Galerie de projets">
           <button class="gallery-item reveal" type="button" data-project="osmoz">
-            <img src="sources/numerique/Osmoz/ecrans.jpg" alt="" loading="lazy">
+            <img src="sources/numerique/Osmoz/Dark Mode iPhone Mockup.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Osmoz</strong><small>Application mobile</small></span>
           </button>
+          <button class="gallery-item reveal" type="button" data-project="dreamz">
+            <img src="sources/numerique/Dreamz/3dreamz.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Dreamz</strong><small>Design numérique</small></span>
+          </button>
           <button class="gallery-item reveal" type="button" data-project="backup">
-            <img src="sources/numerique/sasha/backup-05.jpg" alt="" loading="lazy">
+            <img src="sources/numerique/sasha/1mockup.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Backup</strong><small>Récit interactif</small></span>
           </button>
           <button class="gallery-item reveal" type="button" data-project="alo-radio">
@@ -78,8 +82,12 @@
             <span class="gallery-caption"><strong>Alo Radio</strong><small>Design numérique</small></span>
           </button>
           <button class="gallery-item reveal" type="button" data-project="femmes-industrie">
-            <img src="sources/numerique/mht_musee/accueil.png" alt="" loading="lazy">
+            <img src="sources/numerique/mht_musee/ex1.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Femmes dans l’industrie</strong><small>Édition &amp; mémoire industrielle </small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="mht">
+            <img src="sources/numerique/mht/4mht4.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>MHT</strong><small>Projet numérique</small></span>
           </button>
           <button class="gallery-item reveal" type="button" data-project="cahr">
             <img src="sources/numerique/semsirh/mprh/portada.jpg" alt="" loading="lazy">
@@ -94,12 +102,36 @@
             <span class="gallery-caption"><strong>Musée de l’or</strong><small>Identité éditoriale</small></span>
           </button>
           <button class="gallery-item reveal" type="button" data-project="chronographe">
-            <img src="sources/design/Editorial/Chronographe/jeu.jpg" alt="" loading="lazy">
+            <img src="sources/design/Editorial/Chronographe/portada.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Chronographe</strong><small>Édition &amp; jeu</small></span>
           </button>
           <button class="gallery-item reveal" type="button" data-project="miraflores">
             <img src="sources/design/miraflores/portada.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Miraflores</strong><small>Design éditorial</small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="entreplomos">
+            <img src="sources/numerique/entreplomos/portada.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Entreplomos</strong><small>Design éditorial</small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="femmes-nature">
+            <img src="sources/numerique/Femmes_nature/1ecran.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Femmes &amp; nature</strong><small>Expérience numérique &amp; recherche UX</small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="locos-por-la-tipo">
+            <img src="sources/numerique/locosporlatipo/accueil.png" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Locos por la tipo</strong><small>Design numérique &amp; typographie</small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="paris8">
+            <img src="sources/design/Branding/Paris8/guide.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Paris 8</strong><small>Identité visuelle</small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="pets-company">
+            <img src="sources/design/Branding/Pets-company/logo.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Pets Company</strong><small>Identité visuelle &amp; branding</small></span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-project="villenantes">
+            <img src="sources/design/Villenantes/portada.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>Villenantes</strong><small>Design éditorial</small></span>
           </button>
         </div>
       </div>
@@ -212,7 +244,10 @@
     <h2 id="project-dialog-title"></h2>
     <div class="project-dialog-content">
       <div class="project-dialog-gallery">
-        <img class="project-dialog-image" src="" alt="">
+        <button class="project-dialog-image-button" type="button" aria-label="Agrandir l’image du projet">
+          <img class="project-dialog-image" src="" alt="">
+        </button>
+        <p class="project-dialog-image-hint">Cliquez sur l’image pour l’agrandir.</p>
         <div class="project-dialog-thumbnails" aria-label="Autres visuels du projet"></div>
       </div>
       <div class="project-dialog-copy">
@@ -220,6 +255,14 @@
         <p class="project-dialog-count" aria-live="polite"></p>
       </div>
     </div>
+  </dialog>
+
+  <dialog class="project-image-dialog" aria-label="Image du projet agrandie">
+    <button class="project-image-dialog-close" type="button" aria-label="Fermer l’image agrandie">×</button>
+    <button class="project-image-dialog-navigation project-image-dialog-previous" type="button" aria-label="Afficher l’image précédente">‹</button>
+    <img class="project-image-dialog-image" src="" alt="">
+    <button class="project-image-dialog-navigation project-image-dialog-next" type="button" aria-label="Afficher l’image suivante">›</button>
+    <p class="project-image-dialog-count" aria-live="polite"></p>
   </dialog>
 
   <footer class="site-footer page-shell">
@@ -242,6 +285,10 @@
     const projectDialogTitle = document.querySelector("#project-dialog-title");
     const projectDialogCategory = document.querySelector("#project-dialog-category");
     const projectDialogImage = document.querySelector(".project-dialog-image");
+    const projectDialogImageButton = document.querySelector(".project-dialog-image-button");
+    const projectImageDialog = document.querySelector(".project-image-dialog");
+    const projectImageDialogImage = document.querySelector(".project-image-dialog-image");
+    const projectImageDialogCount = document.querySelector(".project-image-dialog-count");
     const projectDialogThumbnails = document.querySelector(".project-dialog-thumbnails");
     const projectDialogSections = document.querySelector(".project-dialog-sections");
     const projectDialogCount = document.querySelector(".project-dialog-count");
@@ -251,7 +298,32 @@
       { key: "enseignement", title: "3. Enseignement" },
       { key: "decision", title: "4. Décision" }
     ];
+    let currentProject = null;
+    let currentProjectImageIndex = 0;
     const projectDetails = {
+      dreamz: {
+        title: "Dreamz",
+        category: "Design numérique · Expérience utilisateur",
+        sections: {
+          contexte: "Dreamz est un projet numérique présenté à travers ses écrans, ses maquettes et ses éléments de conception.",
+          recherche: "Les visuels de parcours utilisateur permettent d'explorer l'organisation de l'expérience et les besoins auxquels elle répond.",
+          enseignement: "L'articulation du parcours et des écrans aide à rendre l'expérience cohérente et facile à suivre.",
+          decision: "Présenter ensemble l'interface, le parcours utilisateur et les éléments graphiques du projet."
+        },
+        assets: [
+          { src: "sources/numerique/Dreamz/1dreamz1.jpg", label: "Visuel Dreamz 1" },
+          { src: "sources/numerique/Dreamz/2dreamz2.jpg", label: "Visuel Dreamz 2" },
+          { src: "sources/numerique/Dreamz/3dreamz.jpg", label: "Visuel Dreamz 3" },
+          { src: "sources/numerique/Dreamz/4dreamz.jpg", label: "Visuel Dreamz 4" },
+          { src: "sources/numerique/Dreamz/5dreamz.jpg", label: "Visuel Dreamz 5" },
+          { src: "sources/numerique/Dreamz/6dreamz.jpg", label: "Visuel Dreamz 6" },
+          { src: "sources/numerique/Dreamz/7dreamz.jpg", label: "Visuel Dreamz 7" },
+          { src: "sources/numerique/Dreamz/dreamz-09.jpg", label: "Visuel Dreamz 09" },
+          { src: "sources/numerique/Dreamz/dreamz-11.jpg", label: "Visuel Dreamz 11" },
+          { src: "sources/numerique/Dreamz/dreamz_me.jpg", label: "Maquette Dreamz" },
+          { src: "sources/numerique/Dreamz/user.jpg", label: "Visuel utilisateur" }
+        ]
+      },
       cahr: {
         title: "Mon portail RH: portail unique des systèmes d'information des ressources humaines",
         category: "Design UX · Design d'interface",
@@ -315,12 +387,15 @@
           decision: "Créer un ensemble éditorial cohérent comprenant la couverture et les différents éléments de jeu."
         },
         assets: [
-          { src: "sources/design/Editorial/Chronographe/jeu.jpg", label: "Jeu de l’oie" },
-          { src: "sources/design/Editorial/Chronographe/portada.jpg", label: "Couverture" },
+          { src: "sources/design/Editorial/Chronographe/1tableau.jpg", label: "Plateau de jeu 1" },
+          { src: "sources/design/Editorial/Chronographe/2tableau.jpg", label: "Plateau de jeu 2" },
+          { src: "sources/design/Editorial/Chronographe/3tableau.jpg", label: "Plateau de jeu 3" },
+          { src: "sources/design/Editorial/Chronographe/4tableau.jpg", label: "Plateau de jeu 4" },
           { src: "sources/design/Editorial/Chronographe/carte.jpg", label: "Carte du jeu" },
           { src: "sources/design/Editorial/Chronographe/cartes.jpg", label: "Cartes du jeu" },
+          { src: "sources/design/Editorial/Chronographe/image_50339329.JPG", label: "Visuel du projet" },
           { src: "sources/design/Editorial/Chronographe/liste.jpg", label: "Éléments éditoriaux" },
-          { src: "sources/design/Editorial/Chronographe/pres.jpg", label: "Présentation du projet" }
+          { src: "sources/design/Editorial/Chronographe/portada.jpg", label: "Couverture" }
         ]
       },
       miraflores: {
@@ -341,6 +416,129 @@
           { src: "sources/design/miraflores/rose.jpg", label: "Composition rose" }
         ]
       },
+      entreplomos: {
+        title: "Entreplomos",
+        category: "Design éditorial · Identité visuelle",
+        sections: {
+          contexte: "Entreplomos est un projet éditorial décliné sur plusieurs supports, de la couverture au catalogue et aux invitations.",
+          recherche: "Explorer les caractères, les couleurs et les différents supports du projet pour établir un langage visuel cohérent.",
+          enseignement: "Des choix typographiques et chromatiques constants permettent de relier les pièces éditoriales entre elles.",
+          decision: "Décliner une direction visuelle commune dans la couverture, le catalogue et les supports associés."
+        },
+        assets: [
+          { src: "sources/numerique/entreplomos/portada.jpg", label: "Couverture" },
+          { src: "sources/numerique/entreplomos/catalogue.png", label: "Catalogue" },
+          { src: "sources/numerique/entreplomos/carateres.jpg", label: "Caractères typographiques" },
+          { src: "sources/numerique/entreplomos/invitation.png", label: "Invitation" },
+          { src: "sources/numerique/entreplomos/machine.jpg", label: "Visuel du projet" },
+          { src: "sources/numerique/entreplomos/violet.jpg", label: "Composition violette" }
+        ]
+      },
+      "femmes-nature": {
+        title: "Femmes & nature",
+        category: "Expérience numérique · Recherche UX",
+        sections: {
+          contexte: "Un projet numérique autour des liens entre les femmes et la nature, exploré à travers des interfaces et un parcours utilisateur.",
+          recherche: "Les personas, le moodboard et les éléments de parcours permettent d'organiser les besoins et les pistes de conception.",
+          enseignement: "Relier les besoins des utilisatrices à la structure du parcours aide à rendre l'expérience plus cohérente.",
+          decision: "Développer une interface et des écrans qui traduisent le sujet tout au long de l'expérience."
+        },
+        assets: [
+          { src: "sources/numerique/Femmes_nature/1ecran.jpg", label: "Écran 1" },
+          { src: "sources/numerique/Femmes_nature/2ecran.jpg", label: "Écran 2" },
+          { src: "sources/numerique/Femmes_nature/3ecran.jpg", label: "Écran 3" },
+          { src: "sources/numerique/Femmes_nature/4ecran.jpg", label: "Écran 4" },
+          { src: "sources/numerique/Femmes_nature/5ecran.jpg", label: "Écran 5" },
+          { src: "sources/numerique/Femmes_nature/6ecran.jpg", label: "Écran 6" },
+          { src: "sources/numerique/Femmes_nature/bench.jpg", label: "Benchmark" },
+          { src: "sources/numerique/Femmes_nature/cible.jpg", label: "Cible du projet" },
+          { src: "sources/numerique/Femmes_nature/cible1.jpg", label: "Étude de la cible 1" },
+          { src: "sources/numerique/Femmes_nature/cible2.jpg", label: "Étude de la cible 2" },
+          { src: "sources/numerique/Femmes_nature/explo.jpg", label: "Exploration" },
+          { src: "sources/numerique/Femmes_nature/femmes1.jpg", label: "Femmes et nature 1" },
+          { src: "sources/numerique/Femmes_nature/femmes2.jpg", label: "Femmes et nature 2" },
+          { src: "sources/numerique/Femmes_nature/moodboard.jpg", label: "Moodboard" },
+          { src: "sources/numerique/Femmes_nature/femmesn_userf.jpg", label: "Parcours utilisateur" }
+        ]
+      },
+      "locos-por-la-tipo": {
+        title: "Locos por la tipo",
+        category: "Design numérique · Typographie",
+        sections: {
+          contexte: "Un projet numérique consacré à la typographie et à la présentation de contenus autour de la création typographique.",
+          recherche: "Structurer les contenus et les pages du projet pour guider la découverte des propositions typographiques.",
+          enseignement: "Une navigation claire et des compositions lisibles facilitent l'exploration des projets.",
+          decision: "Concevoir une interface qui met en valeur les projets et leurs détails typographiques."
+        },
+        assets: [
+          { src: "sources/numerique/locosporlatipo/accueil.png", label: "Page d’accueil" },
+          { src: "sources/numerique/locosporlatipo/page_projets.jpg", label: "Page des projets" },
+          { src: "sources/numerique/locosporlatipo/page_zoom.jpg", label: "Détail d’un projet" },
+          { src: "sources/numerique/locosporlatipo/scroll.png", label: "Parcours de la page" },
+          { src: "sources/numerique/locosporlatipo/credits.jpg", label: "Crédits" }
+        ]
+      },
+      paris8: {
+        title: "Paris 8",
+        category: "Identité visuelle · Branding",
+        sections: {
+          contexte: "Un projet d'identité visuelle pour Paris 8, décliné dans un guide et plusieurs supports graphiques.",
+          recherche: "Explorer les couleurs, les textures et les éléments de langage pour construire les repères de l'identité.",
+          enseignement: "Un système visuel partagé permet d'assurer la cohérence entre les supports.",
+          decision: "Formaliser l'identité dans un guide et la décliner sur des supports éditoriaux et promotionnels."
+        },
+        assets: [
+          { src: "sources/design/Branding/Paris8/guide.jpg", label: "Guide de l’identité" },
+          { src: "sources/design/Branding/Paris8/Couleurs.jpg", label: "Palette de couleurs" },
+          { src: "sources/design/Branding/Paris8/Textures.jpg", label: "Textures" },
+          { src: "sources/design/Branding/Paris8/lettre.jpg", label: "Support graphique" },
+          { src: "sources/design/Branding/Paris8/Pub.jpg", label: "Support promotionnel" }
+        ]
+      },
+      "pets-company": {
+        title: "Pets Company",
+        category: "Identité visuelle · Branding",
+        sections: {
+          contexte: "Un projet de branding pour Pets Company, construit autour d'un logo et de ses déclinaisons.",
+          recherche: "Explorer les formes et les variations graphiques pour définir un univers visuel identifiable.",
+          enseignement: "La cohérence des déclinaisons aide à préserver la reconnaissance de l'identité sur différents supports.",
+          decision: "Développer un système de marque et le présenter à travers ses principales applications."
+        },
+        assets: [
+          { src: "sources/design/Branding/Pets-company/logo.jpg", label: "Logo" },
+          { src: "sources/design/Branding/Pets-company/charte.jpg", label: "Charte graphique" },
+          { src: "sources/design/Branding/Pets-company/variations.jpg", label: "Variations du logo" },
+          { src: "sources/design/Branding/Pets-company/pub.jpg", label: "Support promotionnel" },
+          { src: "sources/design/Branding/Pets-company/ouvert.jpg", label: "Application de la marque" }
+        ]
+      },
+      villenantes: {
+        title: "Villenantes",
+        category: "Design éditorial · Édition",
+        sections: {
+          contexte: "Un projet éditorial autour de Villenantes, conçu à travers une couverture, des pages intérieures et des supports associés.",
+          recherche: "Organiser les contenus et leurs niveaux de lecture afin de construire une composition éditoriale cohérente.",
+          enseignement: "L'articulation de la couverture, des pages et des schémas donne une lecture structurée au projet.",
+          decision: "Développer une proposition éditoriale qui relie les compositions intérieures et les éléments graphiques."
+        },
+        assets: [
+          { src: "sources/design/Villenantes/portada.jpg", label: "Couverture" },
+          { src: "sources/design/Villenantes/pages.jpg", label: "Pages intérieures" },
+          { src: "sources/design/Villenantes/page03.jpg", label: "Page intérieure 03" },
+          { src: "sources/design/Villenantes/page04.jpg", label: "Page intérieure 04" },
+          { src: "sources/design/Villenantes/page05.jpg", label: "Page intérieure 05" },
+          { src: "sources/design/Villenantes/page06.jpg", label: "Page intérieure 06" },
+          { src: "sources/design/Villenantes/page11.jpg", label: "Page intérieure 11" },
+          { src: "sources/design/Villenantes/page25.jpg", label: "Page intérieure 25" },
+          { src: "sources/design/Villenantes/page26.jpg", label: "Page intérieure 26" },
+          { src: "sources/design/Villenantes/page27.jpg", label: "Page intérieure 27" },
+          { src: "sources/design/Villenantes/page28.jpg", label: "Page intérieure 28" },
+          { src: "sources/design/Villenantes/page29.jpg", label: "Page intérieure 29" },
+          { src: "sources/design/Villenantes/page30.jpg", label: "Page intérieure 30" },
+          { src: "sources/design/Villenantes/carte.jpg", label: "Carte" },
+          { src: "sources/design/Villenantes/schema.jpg", label: "Schéma" }
+        ]
+      },
       osmoz: {
         title: "Osmoz",
         category: "Application mobile · Design UX/UI",
@@ -351,17 +549,17 @@
           decision: "Construire une navigation narrative à choix multiples, avec une interface sombre et intime qui laisse à chacun le contrôle de son rythme."
         },
         assets: [
-          { src: "sources/numerique/Osmoz/portada.jpg", label: "Présentation du projet" },
-          { src: "sources/numerique/Osmoz/ecrans.jpg", label: "Écrans de l’application" },
-          { src: "sources/numerique/Osmoz/interface.jpg", label: "Interface" },
+          { src: "sources/numerique/Osmoz/1equipe.jpg", label: "Équipe du projet" },
+          { src: "sources/numerique/Osmoz/2Osmoz4.jpg", label: "Visuel Osmoz 4" },
+          { src: "sources/numerique/Osmoz/3Osmoz5.jpg", label: "Visuel Osmoz 5" },
+          { src: "sources/numerique/Osmoz/4personas.jpg", label: "Personas" },
+          { src: "sources/numerique/Osmoz/5interface.jpg", label: "Interface" },
+          { src: "sources/numerique/Osmoz/6Osmoz6.jpg", label: "Visuel Osmoz 6" },
+          { src: "sources/numerique/Osmoz/7Osmoz7.jpg", label: "Visuel Osmoz 7" },
+          { src: "sources/numerique/Osmoz/8Osmoz8.jpg", label: "Visuel Osmoz 8" },
+          { src: "sources/numerique/Osmoz/Osmoz12.jpg", label: "Visuel Osmoz 12" },
           { src: "sources/numerique/Osmoz/Dark Mode iPhone Mockup.jpg", label: "Maquette en mode sombre" },
-          { src: "sources/numerique/Osmoz/osmoz_entree.jpg", label: "Écran d’entrée" },
-          { src: "sources/numerique/Osmoz/pages.jpg", label: "Pages de l’application" },
-          { src: "sources/numerique/Osmoz/personas.jpg", label: "Personas" },
-          { src: "sources/numerique/Osmoz/Moodboard.jpeg", label: "Moodboard" },
-          { src: "sources/numerique/Osmoz/livret.jpg", label: "Livret de conception" },
-          { src: "sources/numerique/Osmoz/equipe.jpg", label: "Équipe du projet" },
-          { src: "sources/numerique/Osmoz/vis.png", label: "Visuel de présentation" }
+          { src: "sources/numerique/Osmoz/livret.jpg", label: "Livret de conception" }
         ]
       },
       backup: {
@@ -374,12 +572,31 @@
           decision: "Développer une simulation narrative où illustrations et choix interactifs accompagnent le récit. Le choix d'une esthétique animée est fait pour renforcer l'immersion et la sensibilité du sujet."
         },
         assets: [
+          { src: "sources/numerique/sasha/1mockup.jpg", label: "Mockup" },
+          { src: "sources/numerique/sasha/2sasha1.jpg", label: "Visuel Sasha 1" },
+          { src: "sources/numerique/sasha/3sasha2.jpg", label: "Visuel Sasha 2" },
+          { src: "sources/numerique/sasha/4sasha3.jpg", label: "Visuel Sasha 3" },
+          { src: "sources/numerique/sasha/5 backup08.jpg", label: "Visuel Backup 08" },
+          { src: "sources/numerique/sasha/5backup-06.jpg", label: "Visuel Backup 06" },
+          { src: "sources/numerique/sasha/5backup-07.jpg", label: "Visuel Backup 07" },
+          { src: "sources/numerique/sasha/6Back up Userflow.jpg", label: "Parcours utilisateur" },
+          { src: "sources/numerique/sasha/7Backup story.jpg", label: "Récit Backup" },
+          { src: "sources/numerique/sasha/Back up Userflow 2.jpg", label: "Parcours utilisateur 2" },
+          { src: "sources/numerique/sasha/autre.jpg", label: "Illustration" },
           { src: "sources/numerique/sasha/backup-05.jpg", label: "La conception" },
-          { src: "sources/numerique/sasha/backup-06.jpg", label: "L’expérience interactive" },
-          { src: "sources/numerique/sasha/backup-07.jpg", label: "Direction artistique" },
-          { src: "sources/numerique/sasha/projet.png", label: "Illustrations" },
-          { src: "sources/numerique/sasha/user.jpg", label: "Illustrations" },
-          { src: "sources/numerique/sasha/autre.jpg", label: "Illustrations" }
+          { src: "sources/numerique/sasha/chambre_jeu.png", label: "Chambre de jeu" },
+          { src: "sources/numerique/sasha/couleur.jpg", label: "Couleurs" },
+          { src: "sources/numerique/sasha/ecran.jpg", label: "Écran" },
+          { src: "sources/numerique/sasha/identite.jpg", label: "Identité visuelle" },
+          { src: "sources/numerique/sasha/Intro.png", label: "Introduction" },
+          { src: "sources/numerique/sasha/logo.jpg", label: "Logo" },
+          { src: "sources/numerique/sasha/ordi.jpg", label: "Interface ordinateur" },
+          { src: "sources/numerique/sasha/personaje.gif", label: "Personnage animé" },
+          { src: "sources/numerique/sasha/projet.png", label: "Présentation du projet" },
+          { src: "sources/numerique/sasha/pub.jpg", label: "Visuel de présentation" },
+          { src: "sources/numerique/sasha/typo.jpg", label: "Typographie" },
+          { src: "sources/numerique/sasha/ui.jpg", label: "Interface utilisateur" },
+          { src: "sources/numerique/sasha/user.jpg", label: "Illustration" }
         ]
       },
       "alo-radio": {
@@ -418,6 +635,40 @@
           { src: "sources/numerique/mht_musee/explication.png", label: "Site de la Maison des Hommes et des Techniques" },
           { src: "sources/numerique/mht_musee/manif.png", label: "Recherche et conception" }
         ]
+      },
+      mht: {
+        title: "MHT",
+        category: "Projet numérique · MHT",
+        sections: {
+          contexte: "Le projet MHT est présenté à travers ses visuels de conception et ses différentes pages.",
+          recherche: "L’ensemble des images rassemble les éléments visuels disponibles pour le projet.",
+          enseignement: "La présentation des différents visuels permet de parcourir le projet dans son ensemble.",
+          decision: "Réunir les visuels du dossier MHT dans une galerie consultable et agrandissable."
+        },
+        assets: [
+          { src: "sources/numerique/mht/7mht7.jpg", label: "Visuel MHT 1" },
+          { src: "sources/numerique/mht/7mht7.jpg", label: "Visuel MHT 2" },
+          { src: "sources/numerique/mht/3mht3.jpg", label: "Visuel MHT 3" },
+          { src: "sources/numerique/mht/4mht4.jpg", label: "Visuel MHT 4" },
+          { src: "sources/numerique/mht/5mht5.jpg", label: "Visuel MHT 5" },
+          { src: "sources/numerique/mht/6mht6.jpg", label: "Visuel MHT 6" },
+          { src: "sources/numerique/mht/2mht2.jpg", label: "Visuel MHT 7" },
+          { src: "sources/numerique/mht/8mht8.jpg", label: "Visuel MHT 8" },
+          { src: "sources/numerique/mht/mht9.jpg", label: "Visuel MHT 9" },
+          { src: "sources/numerique/mht/mht10.jpg", label: "Visuel MHT 10" },
+          { src: "sources/numerique/mht/mht11.jpg", label: "Visuel MHT 11" },
+          { src: "sources/numerique/mht/mht12.jpg", label: "Visuel MHT 12" },
+          { src: "sources/numerique/mht/15.jpg", label: "Visuel MHT 15" },
+          { src: "sources/numerique/mht/3mht-06.jpg", label: "Visuel MHT 06" },
+          { src: "sources/numerique/mht/3mht-08.jpg", label: "Visuel MHT 08" },
+          { src: "sources/numerique/mht/3MHT-08.png", label: "Visuel MHT 08" },
+          { src: "sources/numerique/mht/3MHT-09.png", label: "Visuel MHT 09" },
+          { src: "sources/numerique/mht/3MHT-12.jpg", label: "Visuel MHT 12" },
+          { src: "sources/numerique/mht/9exemples.png", label: "Exemples MHT" },
+          { src: "sources/numerique/mht/10MHT-05.jpg", label: "Visuel MHT 05" },
+          { src: "sources/numerique/mht/11MHT-04.jpg", label: "Visuel MHT 04" },
+          { src: "sources/numerique/mht/12MHT-03.jpg", label: "Visuel MHT 03" }
+        ]
       }
     };
 
@@ -437,14 +688,42 @@
     });
 
     function updateProjectDialogImage(project, index) {
+      currentProject = project;
+      currentProjectImageIndex = index;
       const asset = project.assets[index];
       projectDialogImage.src = asset.src;
       projectDialogImage.alt = `${project.title} — ${asset.label}`;
+      projectDialogImageButton.setAttribute("aria-label", `Agrandir l’image : ${project.title} — ${asset.label}`);
       projectDialogCount.textContent = `${String(index + 1).padStart(2, "0")} / ${String(project.assets.length).padStart(2, "0")}`;
+      projectImageDialogCount.textContent = projectDialogCount.textContent;
+      if (projectImageDialog.open) {
+        projectImageDialogImage.src = asset.src;
+        projectImageDialogImage.alt = projectDialogImage.alt;
+      }
       projectDialogThumbnails.querySelectorAll("button").forEach((thumbnail, thumbnailIndex) => {
         thumbnail.setAttribute("aria-pressed", String(thumbnailIndex === index));
       });
     }
+
+    function moveProjectImage(direction) {
+      const imageCount = currentProject.assets.length;
+      const nextIndex = (currentProjectImageIndex + direction + imageCount) % imageCount;
+      updateProjectDialogImage(currentProject, nextIndex);
+    }
+
+    projectDialogImageButton.addEventListener("click", () => {
+      projectImageDialogImage.src = projectDialogImage.src;
+      projectImageDialogImage.alt = projectDialogImage.alt;
+      projectImageDialogCount.textContent = projectDialogCount.textContent;
+      projectImageDialog.showModal();
+    });
+
+    document.querySelector(".project-image-dialog-previous").addEventListener("click", () => moveProjectImage(-1));
+    document.querySelector(".project-image-dialog-next").addEventListener("click", () => moveProjectImage(1));
+    document.querySelector(".project-image-dialog-close").addEventListener("click", () => projectImageDialog.close());
+    projectImageDialog.addEventListener("click", (event) => {
+      if (event.target === projectImageDialog) projectImageDialog.close();
+    });
 
     document.querySelectorAll(".gallery-item").forEach((button) => {
       const project = projectDetails[button.dataset.project];
@@ -488,7 +767,16 @@
       if (event.target === projectDialog) projectDialog.close();
     });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && projectDialog.open) {
+      if (projectImageDialog.open && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+        event.preventDefault();
+        moveProjectImage(event.key === "ArrowRight" ? 1 : -1);
+        return;
+      }
+      if (event.key !== "Escape") return;
+      if (projectImageDialog.open) {
+        event.preventDefault();
+        projectImageDialog.close();
+      } else if (projectDialog.open) {
         event.preventDefault();
         projectDialog.close();
       }
