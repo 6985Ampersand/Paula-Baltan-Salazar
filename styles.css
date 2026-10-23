@@ -188,6 +188,15 @@
     .intro h2 em, .section-heading h2 em { font-weight: 400; }
     .intro-copy { max-width: 460px; padding-top: 8px; }
     .intro-copy p { margin: 0 0 22px; color: #615c59; line-height: 1.85; }
+    .intro-cta {
+      margin: 0 0 26px;
+      color: var(--ink);
+      font-size: clamp(9px, .9vw, 11px);
+      font-weight: 600;
+      letter-spacing: .08em;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
     .text-link {
       display: inline-flex;
       gap: 12px;
