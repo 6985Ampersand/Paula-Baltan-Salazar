@@ -65,6 +65,10 @@
           <p class="section-kicker">Sélection — design graphique &amp; design numérique</p>
         </div>
         <div class="portfolio-wall" role="group" aria-label="Galerie de projets">
+          <button class="gallery-item reveal" type="button" data-project="retex">
+            <img src="sources/numerique/Retex/interface1.jpg" alt="" loading="lazy">
+            <span class="gallery-caption"><strong>UX- espace de mobilité pour les Personnels de direction et d'inspection</strong><small>Application desktop</small></span>
+          </button>
           <button class="gallery-item reveal" type="button" data-project="osmoz">
             <img src="sources/numerique/Osmoz/Dark Mode iPhone Mockup.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Osmoz</strong><small>Application mobile</small></span>
@@ -108,10 +112,6 @@
           <button class="gallery-item reveal" type="button" data-project="miraflores">
             <img src="sources/design/miraflores/portada.jpg" alt="" loading="lazy">
             <span class="gallery-caption"><strong>Miraflores</strong><small>Design éditorial</small></span>
-          </button>
-          <button class="gallery-item reveal" type="button" data-project="entreplomos">
-            <img src="sources/numerique/entreplomos/portada.jpg" alt="" loading="lazy">
-            <span class="gallery-caption"><strong>Entreplomos</strong><small>Design éditorial</small></span>
           </button>
           <button class="gallery-item reveal" type="button" data-project="femmes-nature">
             <img src="sources/numerique/Femmes_nature/1ecran.jpg" alt="" loading="lazy">
@@ -301,14 +301,31 @@
     let currentProject = null;
     let currentProjectImageIndex = 0;
     const projectDetails = {
+    retex: {
+        title: "Démqrche UX pour l’espace de mobilité des Personnels de direction et d’inspection",
+        category: "Design numérique · Recherche UX",
+        sections: {
+          contexte: "L'amélioration de l'expérience utilisateur pour les personnels de direction et d'inspection demande la mise en place des démarches UX faisant un contact direct avec les agents du ministère. Dans ce dossier, on a mené des ateliers de co-création, des tests utilisateurs et des interviews pour comprendre les irritants actuels de l'espace. Un test utilisateur est prévu pour valider les améliorations proposées.",
+          recherche: "Le projet s'appuie sur l'expérience des utilisateurs sur la version actuelle et des propositions d'améliorations futures.",
+          enseignement: "L'adaptation de la page d'accueil a permis de changer significativement l'expérience en enlevant des informations inutiles et en ajoutant des fonctionnalités comme l'ajout d'un pop-up qui permet de faire la consultation des fiches sans fermer l'écran. La cohérence entre interface, contenu et parcours permet de guider l'utilisateur sans friction et de renforcer la compréhension rapide du service.",
+          decision: " Avec l'équipe, nous avons choisi de consacrer du temps à l'adaptation d'un bandeau d'accueil dont le contenu évolue en fonction des étapes en cours, afin de ne pas induire l'utilisateur en erreur sur les étapes qui le concernent. En complément, nous avons ajouté un suivi des candidatures permettant de consulter plus rapidement les documents et de prendre connaissance des étapes déjà franchies pour chaque candidature."
+        },
+        assets: [
+          { src: "sources/numerique/Retex/cadrage.jpg", label: "Visuel Retex 1" },
+          { src: "sources/numerique/Retex/cadrage1.jpg", label: "Visuel Retex 2" },
+          { src: "sources/numerique/Retex/cadrage2.png", label: "Visuel Retex 3" },
+          { src: "sources/numerique/Retex/interface1.jpg", label: "Visuel Retex 4" },
+          { src: "sources/numerique/Retex/suivi.jpg", label: "Visuel Retex 5" }
+        ]
+      },
       dreamz: {
         title: "Dreamz",
         category: "Design numérique · Expérience utilisateur",
         sections: {
-          contexte: "Dreamz explore la création d'une expérience mobile pensée pour rendre un service plus intuitif, plus immersif et plus agréable à parcourir.",
-          recherche: "Le projet s'appuie sur le parcours utilisateur, les écrans et les éléments de navigation pour structurer les fonctionnalités autour des besoins et des attentes des utilisateurs.",
-          enseignement: "La cohérence entre interface, contenu et parcours permet de guider l'utilisateur sans friction et de renforcer la compréhension rapide du service.",
-          decision: "J’ai choisi de présenter l'ensemble du système visuel, du flux d’usage aux écrans, pour montrer comment l’identité du projet se traduit dans une expérience complète."
+          contexte: "Comment créer une application de narration interactive qui utilise la technologie pour encourager une création active, face à une génération exposée aux écrans et souvent passive devant les écrans ?.",
+          recherche: "Le projet s'appuie sur le parcours utilisateur, les écrans et les éléments de navigation pour structurer les fonctionnalités autour la narration et l'expérience pour les enfants.",
+          enseignement: "Il est essentiel de toujours prendre en compte les implications et les conséquences des choix de design et des technologies utilisées. C’est particulièrement important dans le cas d’une application narrative destinée à accompagner l’enfant au moment de l’endormissement. L’une des questions centrales était donc : comment concevoir une expérience interactive qui accompagne l’enfant au début du sommeil sans perturber son endormissement ?.",
+          decision: "J'ai choisi une technologie à faible impact pour l'enfant afin de préserver son sommeil, tout en intégrant des préconisations d'usage directement au cœur du récit."
         },
         assets: [
           { src: "sources/numerique/Dreamz/1dreamz1.jpg", label: "Visuel Dreamz 1" },
@@ -416,24 +433,6 @@
           { src: "sources/design/miraflores/rose.jpg", label: "Composition rose" }
         ]
       },
-      entreplomos: {
-        title: "Entreplomos",
-        category: "Design de contenu · Identité visuelle",
-        sections: {
-          contexte: "Entreplomos s'inscrit dans une logique éditoriale et visuelle où la couverture, le catalogue et les supports de communication partagent un même langage.",
-          recherche: "La recherche porte sur les caractères, les palettes et les formats afin de construire une identité typographique cohérente.",
-          enseignement: "Un système graphique cohérent renforce la lisibilité et la mémorisation du projet sur différents supports.",
-          decision: "J'ai développé une direction visuelle unifiée, de la couverture aux éléments de communication, pour favoriser la continuité."
-        },
-        assets: [
-          { src: "sources/numerique/entreplomos/portada.jpg", label: "Couverture" },
-          { src: "sources/numerique/entreplomos/catalogue.png", label: "Catalogue" },
-          { src: "sources/numerique/entreplomos/carateres.jpg", label: "Caractères typographiques" },
-          { src: "sources/numerique/entreplomos/invitation.png", label: "Invitation" },
-          { src: "sources/numerique/entreplomos/machine.jpg", label: "Visuel du projet" },
-          { src: "sources/numerique/entreplomos/violet.jpg", label: "Composition violette" }
-        ]
-      },
       "femmes-nature": {
         title: "Femmes & nature",
         category: "Expérience numérique · Recherche UX",
@@ -465,10 +464,10 @@
         title: "Locos por la tipo",
         category: "Design numérique · Typographie",
         sections: {
-          contexte: "Locos por la tipo est un projet de design numérique centré sur la typographie et la mise en valeur de créations typographiques.",
-          recherche: "Le projet organise les contenus autour d'une navigation claire et d'une lecture guidée des projets, pour mieux révéler la richesse des formes.",
+          contexte: "Locos por la tipo est le site officiel du groupe de recherche du même nom. C'est un projet de design numérique centré sur la mise en valeur des actions de récupération typographique et la mise en valeur de la recherche et du patrimoine.",
+          recherche: "Le projet organise les contenus autour d'une navigation claire et d'une lecture guidée des projets, pour mieux révéler la richesse des activités.",
           enseignement: "La typographie devient plus forte lorsqu'elle est portée par un rythme, une hiérarchie et un espace de lecture soigneusement pensés.",
-          decision: "J'ai conçu une interface qui donne de la place aux formes et fait émerger les détails typographiques sans surcharger le parcours."
+          decision: "On a conçu une interface qui donne de la place aux formes et fait émerger les détails typographiques sans surcharger le parcours."
         },
         assets: [
           { src: "sources/numerique/locosporlatipo/accueil.png", label: "Page d’accueil" },
@@ -488,6 +487,9 @@
           decision: "J'ai formalisé une charte graphique puis l'ai décliné sur des supports éditoriaux et promotionnels."
         },
         assets: [
+          { src: "sources/design/Branding/Paris8/1marque.jpg", label: "Guide de l’identité" },
+          { src: "sources/design/Branding/Paris8/2marque.jpg", label: "Palette de couleurs" },
+          { src: "sources/design/Branding/Paris8/3marque.jpg", label: "Textures" },
           { src: "sources/design/Branding/Paris8/guide.jpg", label: "Guide de l’identité" },
           { src: "sources/design/Branding/Paris8/Couleurs.jpg", label: "Palette de couleurs" },
           { src: "sources/design/Branding/Paris8/Textures.jpg", label: "Textures" },
