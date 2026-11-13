@@ -261,17 +261,21 @@
       <p class="section-kicker" id="project-dialog-category"></p>
       <button class="project-dialog-close" type="button" aria-label="Fermer le projet">×</button>
     </div>
-    <h2 id="project-dialog-title"></h2>
-    <div class="project-dialog-content">
-      <div class="project-dialog-gallery">
+    <div class="project-dialog-overview">
+      <h2 id="project-dialog-title"></h2>
+      <div class="project-dialog-sections" aria-label="Étapes du projet"></div>
+    </div>
+    <div class="project-dialog-gallery">
+      <div class="project-dialog-stage">
         <button class="project-dialog-image-button" type="button" aria-label="Agrandir l’image du projet">
           <img class="project-dialog-image" src="" alt="">
         </button>
+        <button class="project-dialog-navigation project-dialog-previous" type="button" aria-label="Afficher l’image précédente">‹</button>
+        <button class="project-dialog-navigation project-dialog-next" type="button" aria-label="Afficher l’image suivante">›</button>
+      </div>
+      <div class="project-dialog-gallery-footer">
         <p class="project-dialog-image-hint">Touchez ou cliquez sur l’image pour l’agrandir.</p>
         <div class="project-dialog-thumbnails" aria-label="Autres visuels du projet"></div>
-      </div>
-      <div class="project-dialog-copy">
-        <div class="project-dialog-sections" aria-label="Étapes du projet"></div>
         <p class="project-dialog-count" aria-live="polite"></p>
       </div>
     </div>
@@ -306,6 +310,8 @@
     const projectDialogCategory = document.querySelector("#project-dialog-category");
     const projectDialogImage = document.querySelector(".project-dialog-image");
     const projectDialogImageButton = document.querySelector(".project-dialog-image-button");
+    const projectDialogPrevious = document.querySelector(".project-dialog-previous");
+    const projectDialogNext = document.querySelector(".project-dialog-next");
     const projectImageDialog = document.querySelector(".project-image-dialog");
     const projectImageDialogImage = document.querySelector(".project-image-dialog-image");
     const projectImageDialogCount = document.querySelector(".project-image-dialog-count");
@@ -740,6 +746,8 @@
       projectImageDialog.showModal();
     });
 
+    projectDialogPrevious.addEventListener("click", () => moveProjectImage(-1));
+    projectDialogNext.addEventListener("click", () => moveProjectImage(1));
     document.querySelector(".project-image-dialog-previous").addEventListener("click", () => moveProjectImage(-1));
     document.querySelector(".project-image-dialog-next").addEventListener("click", () => moveProjectImage(1));
     document.querySelector(".project-image-dialog-close").addEventListener("click", () => projectImageDialog.close());
@@ -780,6 +788,7 @@
         });
 
         updateProjectDialogImage(project, 0);
+        projectDialog.scrollTop = 0;
         projectDialog.showModal();
       });
     });
@@ -790,6 +799,11 @@
     });
     document.addEventListener("keydown", (event) => {
       if (projectImageDialog.open && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+        event.preventDefault();
+        moveProjectImage(event.key === "ArrowRight" ? 1 : -1);
+        return;
+      }
+      if (projectDialog.open && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
         event.preventDefault();
         moveProjectImage(event.key === "ArrowRight" ? 1 : -1);
         return;
